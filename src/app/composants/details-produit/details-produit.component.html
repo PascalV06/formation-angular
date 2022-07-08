@@ -1,0 +1,36 @@
+<h2 class="container">Modifier produit</h2>
+<form class="container" (ngSubmit)="modifierProduit()" #monForm="ngForm">
+    <div class="mb-3">
+        <label for="id" class="form-label">Identifiant</label>
+        <input type="number" class="form-control" id="id" name="id" [(ngModel)]="produit.id" readonly required
+            #id="ngModel">
+        <div [hidden]="id.valid || id.pristine" class="text-danger text-center">
+            L'identifiant est obligatoire
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="designation" class="form-label">Désignation</label>
+        <input type="text" class="form-control" id="designation" name="designation" [(ngModel)]="produit.designation"
+            required minlength="3" maxlength="30" #designation="ngModel">
+        <div [hidden]="designation.valid  || designation.pristine" class="text-danger text-center">
+            La désignation est obligatoire et doit contenir entre 3 et 30 caractères
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="prixUnitaire" class="form-label">Prix unitaire </label>
+        <input type="number" class="form-control" id="prixUnitaire" name="prixUnitaire"
+            [(ngModel)]="produit.prixUnitaire" required min="10" max="1000" #prixUnitaire="ngModel">
+        <div [hidden]="prixUnitaire.valid  || prixUnitaire.pristine" class="text-danger text-center">
+            Le prix unitaire est obligatoire et la valeur doit être comprise entre 10 et 1000
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="quantiteEnStock" class="form-label">Quantité </label>
+        <input type="number" class="form-control" id="quantiteEnStock" name="quantiteEnStock"
+            [(ngModel)]="produit.quantiteEnStock" required #quantiteEnStock="ngModel">
+        <div [hidden]="quantiteEnStock.valid  || quantiteEnStock.pristine" class="text-danger text-center">
+            La quantité est obligatoire
+        </div>
+    </div>
+    <button [disabled]="monForm.invalid" class="btn btn-primary">Enregistrer</button>
+</form>

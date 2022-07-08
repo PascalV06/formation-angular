@@ -1,0 +1,50 @@
+{
+    "utilisateurs": [
+        {
+          "id": 1,
+          "nom": "wick",
+          "prenom": "john",
+          "motDePasse": "wick"
+        },
+        {
+          "id": 2,
+          "nom": "travolta",
+          "prenom": "john",
+          "motDePasse": "travolta"
+        }
+      ],
+  
+    "produits": [
+    {
+      "id": 1,
+      "designation": "Ecran lcd",
+      "prixUnitaire": 150,
+      "quantiteEnStock": 13,
+      "chemin": ""
+    },
+    {
+      "designation": "Imprimante jet d'encre",
+      "prixUnitaire": 132,
+      "quantiteEnStock": 2,
+      "id": 2
+    },
+    {
+      "designation": "Souris laser",
+      "prixUnitaire": 26,
+      "quantiteEnStock": 54,
+      "id": 4
+    },
+    {
+      "designation": "Clavier",
+      "prixUnitaire": 54,
+      "quantiteEnStock": 3,
+      "id": 5
+    },
+    {
+      "designation": "Vidéo Projecteur",
+      "prixUnitaire": 374,
+      "quantiteEnStock": 14,
+      "id": 6
+    }
+  ]
+}

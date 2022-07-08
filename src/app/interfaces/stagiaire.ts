@@ -1,6 +1,6 @@
 export interface Stagiaire {
-num?: number;
-nom?: string;
-prenom?: string;
+num: number;
+nom: string;
+prenom: string;
 
 }
